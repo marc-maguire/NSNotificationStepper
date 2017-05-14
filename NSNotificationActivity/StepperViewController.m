@@ -21,7 +21,7 @@
     
     self.stepper.stepValue = 1;
     
-    // Do any additional setup after loading the view.
+    [self stepperPressed:self.stepper];
 }
 
 
