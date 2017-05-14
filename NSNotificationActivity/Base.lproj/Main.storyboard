@@ -1,26 +1,115 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="fGI-Zs-aro">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Item 2-->
+        <scene sceneID="LFC-FT-CdL">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="LxA-m6-eKz" customClass="CounterViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                        <viewControllerLayoutGuide type="top" id="di5-wt-HKU"/>
+                        <viewControllerLayoutGuide type="bottom" id="Ga9-br-LtA"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" id="Trv-Qi-sTG">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bAP-7V-dPu">
+                                <rect key="frame" x="166.5" y="323" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Counter View Controller" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qVw-cw-amw">
+                                <rect key="frame" x="96" y="28" width="183" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="qVw-cw-amw" firstAttribute="centerX" secondItem="Trv-Qi-sTG" secondAttribute="centerX" id="Abx-7i-UtE"/>
+                            <constraint firstItem="bAP-7V-dPu" firstAttribute="centerX" secondItem="Trv-Qi-sTG" secondAttribute="centerX" id="VJN-oN-g3n"/>
+                            <constraint firstItem="qVw-cw-amw" firstAttribute="top" secondItem="di5-wt-HKU" secondAttribute="bottom" constant="8" id="YQ1-6k-qnp"/>
+                            <constraint firstItem="bAP-7V-dPu" firstAttribute="centerY" secondItem="Trv-Qi-sTG" secondAttribute="centerY" id="kNZ-fy-iFP"/>
+                        </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Item 2" id="1T7-tM-Go9"/>
+                    <connections>
+                        <outlet property="counterLabel" destination="bAP-7V-dPu" id="gLU-zB-Huw"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ag9-AL-8En" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="12" y="192"/>
+        </scene>
+        <!--Item 1-->
+        <scene sceneID="J1Z-Q6-x9O">
+            <objects>
+                <viewController id="QaA-pP-Udm" customClass="StepperViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="N6z-ef-8Nk"/>
+                        <viewControllerLayoutGuide type="bottom" id="LRj-Ae-g2h"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="dAR-fb-CEd">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="zbP-eW-GFC">
+                                <rect key="frame" x="140.5" y="319" width="94" height="29"/>
+                                <connections>
+                                    <action selector="stepperPressed:" destination="QaA-pP-Udm" eventType="valueChanged" id="85N-xA-XIT"/>
+                                </connections>
+                            </stepper>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stepper View Controller" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gf6-Nw-yCL">
+                                <rect key="frame" x="96" y="28" width="182" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="zbP-eW-GFC" firstAttribute="centerX" secondItem="dAR-fb-CEd" secondAttribute="centerX" id="DEq-2X-Ucn"/>
+                            <constraint firstItem="zbP-eW-GFC" firstAttribute="centerY" secondItem="dAR-fb-CEd" secondAttribute="centerY" id="QQ6-n2-AL0"/>
+                            <constraint firstItem="Gf6-Nw-yCL" firstAttribute="top" secondItem="N6z-ef-8Nk" secondAttribute="bottom" constant="8" id="TGu-Er-Ywn"/>
+                            <constraint firstItem="Gf6-Nw-yCL" firstAttribute="centerX" secondItem="dAR-fb-CEd" secondAttribute="centerX" id="vuE-8m-bBj"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 1" id="eMt-fp-IFi"/>
+                    <connections>
+                        <outlet property="stepper" destination="zbP-eW-GFC" id="aOb-Gg-FgO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="I7g-vZ-Hpd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="12" y="-476"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="Sln-VZ-7Te">
+            <objects>
+                <tabBarController id="fGI-Zs-aro" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="K6i-qE-2fK">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="QaA-pP-Udm" kind="relationship" relationship="viewControllers" id="6ez-Iy-xeh"/>
+                        <segue destination="LxA-m6-eKz" kind="relationship" relationship="viewControllers" id="fTp-DL-sh5"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aw4-75-3JB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-940" y="-149"/>
         </scene>
     </scenes>
 </document>

@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  CounterViewController.h
 //  NSNotificationActivity
 //
 //  Created by Marc Maguire on 2017-05-14.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface CounterViewController : UIViewController
 
 @end
-

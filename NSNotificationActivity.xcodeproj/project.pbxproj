@@ -9,10 +9,11 @@
 /* Begin PBXBuildFile section */
 		926E69F11EC8997000BD57C6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 926E69F01EC8997000BD57C6 /* main.m */; };
 		926E69F41EC8997000BD57C6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 926E69F31EC8997000BD57C6 /* AppDelegate.m */; };
-		926E69F71EC8997000BD57C6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 926E69F61EC8997000BD57C6 /* ViewController.m */; };
 		926E69FA1EC8997000BD57C6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 926E69F81EC8997000BD57C6 /* Main.storyboard */; };
 		926E69FC1EC8997000BD57C6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 926E69FB1EC8997000BD57C6 /* Assets.xcassets */; };
 		926E69FF1EC8997000BD57C6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 926E69FD1EC8997000BD57C6 /* LaunchScreen.storyboard */; };
+		926E6A081EC899CF00BD57C6 /* StepperViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 926E6A071EC899CF00BD57C6 /* StepperViewController.m */; };
+		926E6A0B1EC899D800BD57C6 /* CounterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 926E6A0A1EC899D800BD57C6 /* CounterViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,12 +21,14 @@
 		926E69F01EC8997000BD57C6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		926E69F21EC8997000BD57C6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		926E69F31EC8997000BD57C6 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		926E69F51EC8997000BD57C6 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		926E69F61EC8997000BD57C6 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		926E69F91EC8997000BD57C6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		926E69FB1EC8997000BD57C6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		926E69FE1EC8997000BD57C6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		926E6A001EC8997000BD57C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		926E6A061EC899CF00BD57C6 /* StepperViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StepperViewController.h; sourceTree = "<group>"; };
+		926E6A071EC899CF00BD57C6 /* StepperViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StepperViewController.m; sourceTree = "<group>"; };
+		926E6A091EC899D800BD57C6 /* CounterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CounterViewController.h; sourceTree = "<group>"; };
+		926E6A0A1EC899D800BD57C6 /* CounterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CounterViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,11 +61,11 @@
 		926E69EE1EC8997000BD57C6 /* NSNotificationActivity */ = {
 			isa = PBXGroup;
 			children = (
-				926E69F21EC8997000BD57C6 /* AppDelegate.h */,
-				926E69F31EC8997000BD57C6 /* AppDelegate.m */,
-				926E69F51EC8997000BD57C6 /* ViewController.h */,
-				926E69F61EC8997000BD57C6 /* ViewController.m */,
 				926E69F81EC8997000BD57C6 /* Main.storyboard */,
+				926E6A061EC899CF00BD57C6 /* StepperViewController.h */,
+				926E6A071EC899CF00BD57C6 /* StepperViewController.m */,
+				926E6A091EC899D800BD57C6 /* CounterViewController.h */,
+				926E6A0A1EC899D800BD57C6 /* CounterViewController.m */,
 				926E69FB1EC8997000BD57C6 /* Assets.xcassets */,
 				926E69FD1EC8997000BD57C6 /* LaunchScreen.storyboard */,
 				926E6A001EC8997000BD57C6 /* Info.plist */,
@@ -74,6 +77,8 @@
 		926E69EF1EC8997000BD57C6 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				926E69F21EC8997000BD57C6 /* AppDelegate.h */,
+				926E69F31EC8997000BD57C6 /* AppDelegate.m */,
 				926E69F01EC8997000BD57C6 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -150,7 +155,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				926E69F71EC8997000BD57C6 /* ViewController.m in Sources */,
+				926E6A081EC899CF00BD57C6 /* StepperViewController.m in Sources */,
+				926E6A0B1EC899D800BD57C6 /* CounterViewController.m in Sources */,
 				926E69F41EC8997000BD57C6 /* AppDelegate.m in Sources */,
 				926E69F11EC8997000BD57C6 /* main.m in Sources */,
 			);
