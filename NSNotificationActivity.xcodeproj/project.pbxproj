@@ -14,6 +14,7 @@
 		926E69FF1EC8997000BD57C6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 926E69FD1EC8997000BD57C6 /* LaunchScreen.storyboard */; };
 		926E6A081EC899CF00BD57C6 /* StepperViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 926E6A071EC899CF00BD57C6 /* StepperViewController.m */; };
 		926E6A0B1EC899D800BD57C6 /* CounterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 926E6A0A1EC899D800BD57C6 /* CounterViewController.m */; };
+		926E6A0E1EC8AA3400BD57C6 /* KeyboardAdjusterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 926E6A0D1EC8AA3400BD57C6 /* KeyboardAdjusterViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,8 @@
 		926E6A071EC899CF00BD57C6 /* StepperViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StepperViewController.m; sourceTree = "<group>"; };
 		926E6A091EC899D800BD57C6 /* CounterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CounterViewController.h; sourceTree = "<group>"; };
 		926E6A0A1EC899D800BD57C6 /* CounterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CounterViewController.m; sourceTree = "<group>"; };
+		926E6A0C1EC8AA3400BD57C6 /* KeyboardAdjusterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeyboardAdjusterViewController.h; sourceTree = "<group>"; };
+		926E6A0D1EC8AA3400BD57C6 /* KeyboardAdjusterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeyboardAdjusterViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +69,8 @@
 				926E6A071EC899CF00BD57C6 /* StepperViewController.m */,
 				926E6A091EC899D800BD57C6 /* CounterViewController.h */,
 				926E6A0A1EC899D800BD57C6 /* CounterViewController.m */,
+				926E6A0C1EC8AA3400BD57C6 /* KeyboardAdjusterViewController.h */,
+				926E6A0D1EC8AA3400BD57C6 /* KeyboardAdjusterViewController.m */,
 				926E69FB1EC8997000BD57C6 /* Assets.xcassets */,
 				926E69FD1EC8997000BD57C6 /* LaunchScreen.storyboard */,
 				926E6A001EC8997000BD57C6 /* Info.plist */,
@@ -155,6 +160,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				926E6A0E1EC8AA3400BD57C6 /* KeyboardAdjusterViewController.m in Sources */,
 				926E6A081EC899CF00BD57C6 /* StepperViewController.m in Sources */,
 				926E6A0B1EC899D800BD57C6 /* CounterViewController.m in Sources */,
 				926E69F41EC8997000BD57C6 /* AppDelegate.m in Sources */,

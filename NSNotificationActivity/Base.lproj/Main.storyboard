@@ -51,6 +51,66 @@
             </objects>
             <point key="canvasLocation" x="12" y="192"/>
         </scene>
+        <!--Item-->
+        <scene sceneID="PjI-rQ-7zv">
+            <objects>
+                <viewController id="A34-ea-NxX" customClass="KeyboardAdjusterViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="nyD-JX-DIj"/>
+                        <viewControllerLayoutGuide type="bottom" id="hdX-xE-WLl"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Nz6-za-EsJ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FX4-QV-HBV">
+                                <rect key="frame" x="67.5" y="446" width="240" height="128"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZuP-HM-eSe">
+                                        <rect key="frame" x="30.5" y="49" width="179" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="179" id="BtX-NJ-Qax"/>
+                                            <constraint firstAttribute="height" constant="30" id="k2g-zW-r9X"/>
+                                        </constraints>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="ZuP-HM-eSe" firstAttribute="centerX" secondItem="FX4-QV-HBV" secondAttribute="centerX" id="3F2-fR-R82"/>
+                                    <constraint firstItem="ZuP-HM-eSe" firstAttribute="top" secondItem="FX4-QV-HBV" secondAttribute="top" constant="49" id="WUd-Ve-9NX"/>
+                                    <constraint firstAttribute="height" constant="128" id="h7j-88-2oM"/>
+                                    <constraint firstAttribute="width" constant="240" id="j7G-JL-KX5"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="FX4-QV-HBV" firstAttribute="centerX" secondItem="Nz6-za-EsJ" secondAttribute="centerX" id="h8P-hN-2aB"/>
+                            <constraint firstItem="hdX-xE-WLl" firstAttribute="top" secondItem="FX4-QV-HBV" secondAttribute="bottom" constant="44" id="jUy-pY-clI"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="cBZ-ts-H8v" appends="YES" id="cdx-jZ-56W"/>
+                        </connections>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="LM6-UX-NgC"/>
+                    <connections>
+                        <outlet property="textField" destination="ZuP-HM-eSe" id="7Rf-rK-KiD"/>
+                        <outlet property="whiteViewBottomSpacingConstraint" destination="jUy-pY-clI" id="Mge-F3-5rf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4zN-lm-uzm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="cBZ-ts-H8v">
+                    <connections>
+                        <action selector="superViewTapped:" destination="A34-ea-NxX" id="tYq-or-DlA"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="-2.3999999999999999" y="886.50674662668678"/>
+        </scene>
         <!--Item 1-->
         <scene sceneID="J1Z-Q6-x9O">
             <objects>
@@ -70,7 +130,7 @@
                                 </connections>
                             </stepper>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stepper View Controller" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gf6-Nw-yCL">
-                                <rect key="frame" x="96" y="28" width="182" height="21"/>
+                                <rect key="frame" x="96.5" y="28" width="182" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -105,6 +165,7 @@
                     <connections>
                         <segue destination="QaA-pP-Udm" kind="relationship" relationship="viewControllers" id="6ez-Iy-xeh"/>
                         <segue destination="LxA-m6-eKz" kind="relationship" relationship="viewControllers" id="fTp-DL-sh5"/>
+                        <segue destination="A34-ea-NxX" kind="relationship" relationship="viewControllers" id="sAw-5y-wMT"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aw4-75-3JB" userLabel="First Responder" sceneMemberID="firstResponder"/>
