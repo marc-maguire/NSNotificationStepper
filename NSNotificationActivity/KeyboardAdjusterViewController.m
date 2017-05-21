@@ -12,6 +12,10 @@
 
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *whiteViewBottomSpacingConstraint;
 @property (weak, nonatomic) IBOutlet UITextField *textField;
+@property (nonatomic, readonly) CGFloat oldConstraint;
+@property (nonatomic) CGRect oldFrame;
+@property (weak, nonatomic) IBOutlet UIView *containerView;
+
 
 @end
 
@@ -19,7 +23,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateViewConstraints) name:UIKeyboardDidShowNotification object:nil];
+    
+    NSNotificationCenter *notificationCenter = [NSNotificationCenter defaultCenter];
+    [notificationCenter addObserver:self selector:@selector(keyboardWillShow:) name:UIKeyboardWillShowNotification object:nil];
+    [notificationCenter addObserver:self selector:@selector(keyboardWillHide:) name:UIKeyboardWillHideNotification object:nil];
+    
+    _oldConstraint = self.whiteViewBottomSpacingConstraint.constant;
+    _oldFrame = self.view.bounds;
     // Do any additional setup after loading the view.
 }
 
@@ -29,9 +39,37 @@
 //register as listener for keyboard messages, if so updatedconstraints
 
 
-- (void)updateViewConstraints:(NSNotification *)notification {
+- (void)keyboardWillShow:(NSNotification *)notification {
     
     //expand the y constant to be the same as the keyboard + the current value.
+    NSValue *value = notification.userInfo[UIKeyboardFrameEndUserInfoKey];
+    CGRect rect = value.CGRectValue;
+    self.view.bounds = CGRectMake(self.view.frame.origin.x, self.view.frame.origin.y + rect.size.height, self.view.frame.size.width, self.view.frame.size.height);
+//    self.whiteViewBottomSpacingConstraint.constant -= rect.origin.y;
+//    CGRect newFrame = CGRectMake(self.oldFrame.origin.x, self.oldFrame.origin.y + rect.size.height, self.oldFrame.size.width, self.oldFrame.size.height);
+//    
+//    //need to make a new frame that just subtracts height (moves screen up)
+//    self.view.frame = newFrame;
+    
+
+    
+}
+
+- (void)keyboardWillHide:(NSNotification *)notification {
+//    
+    NSValue *value = notification.userInfo[UIKeyboardFrameEndUserInfoKey];
+    CGRect rect = value.CGRectValue;
+    self.view.bounds = self.oldFrame;
+//     self.view.bounds = CGRectMake(self.view.frame.origin.x, self.view.frame.origin.y - rect.size.height, self.view.frame.size.width, self.view.frame.size.height);
+//    self.whiteViewBottomSpacingConstraint.constant = self.oldConstraint;
+    //need to make a new frame that just adds height (moves down
+//    CGRect newFrame = CGRectMake(self.oldFrame.origin.x, self.oldFrame.origin.y - rect.size.height, self.oldFrame.size.width, self.oldFrame.size.height);
+//
+//    
+//    self.view.frame = newFrame;
+
+    
+    
     
 }
 

@@ -98,6 +98,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="LM6-UX-NgC"/>
                     <connections>
+                        <outlet property="containerView" destination="FX4-QV-HBV" id="fyd-Aa-fDO"/>
                         <outlet property="textField" destination="ZuP-HM-eSe" id="7Rf-rK-KiD"/>
                         <outlet property="whiteViewBottomSpacingConstraint" destination="jUy-pY-clI" id="Mge-F3-5rf"/>
                     </connections>
