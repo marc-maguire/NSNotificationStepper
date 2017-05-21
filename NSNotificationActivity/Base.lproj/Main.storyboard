@@ -89,8 +89,8 @@
                         <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <gestureRecognizers/>
                         <constraints>
+                            <constraint firstItem="hdX-xE-WLl" firstAttribute="top" secondItem="FX4-QV-HBV" secondAttribute="bottom" constant="44" id="BEw-0O-Ftl"/>
                             <constraint firstItem="FX4-QV-HBV" firstAttribute="centerX" secondItem="Nz6-za-EsJ" secondAttribute="centerX" id="h8P-hN-2aB"/>
-                            <constraint firstItem="hdX-xE-WLl" firstAttribute="top" secondItem="FX4-QV-HBV" secondAttribute="bottom" constant="44" id="jUy-pY-clI"/>
                         </constraints>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="cBZ-ts-H8v" appends="YES" id="cdx-jZ-56W"/>
@@ -100,7 +100,6 @@
                     <connections>
                         <outlet property="containerView" destination="FX4-QV-HBV" id="fyd-Aa-fDO"/>
                         <outlet property="textField" destination="ZuP-HM-eSe" id="7Rf-rK-KiD"/>
-                        <outlet property="whiteViewBottomSpacingConstraint" destination="jUy-pY-clI" id="Mge-F3-5rf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4zN-lm-uzm" userLabel="First Responder" sceneMemberID="firstResponder"/>
